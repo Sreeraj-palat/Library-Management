@@ -1,0 +1,45 @@
+{% extends 'student/student_index.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    a { color: inherit; } 
+</style>
+    
+
+
+
+<div class="page-wrapper">
+
+    <div class="container-fluid">
+       
+        <div class="row justify-content-center">
+            {% for book in book %}
+                
+            
+            <div class="col-lg-4 col-md-12">
+                <a href="">
+                <div class="white-box analytics-info">
+                    <h3 class="box-title">{{book.name}}</h3>
+                    <h5 class="font-medium">{{book.auther}}</h5>
+                    <span class="mb-3 d-block">{{book.description}}</span>
+                   
+                </div>
+            </a>
+            </div>
+            {% endfor %}
+            
+            
+       
+
+            
+            
+           
+            
+        </div>
+        
+    </div>
+</div>
+    
+{% endblock %}
